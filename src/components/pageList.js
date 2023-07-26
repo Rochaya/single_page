@@ -10,7 +10,7 @@ const PageList = (argument = '') => {
           <img src="${article.background_image}">
           <h1>${article.name}</h1>
           <h2>${article.released}</h2>
-          <a href="#pagedetail/${article.id}">${article.id}</a>
+          <a href="#pagedetail/${article.id}">Voir plus ...</a>
         </article>`
       ));
       const resultsContainer = document.querySelector('.page-list .articles');
