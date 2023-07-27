@@ -2,6 +2,8 @@ import './style/index.scss';
 import routes from './routes';
 import './components/pageDetail';
 import './components/pageList';
+import './components/search';
+import searchForm from './components/search';
 
 
 // console.log(process.env.API_KEY);
@@ -16,7 +18,10 @@ const callRoute = () => {
     if (pageFunction !== undefined) {
       pageFunction(pageArgument);
     }
-  };
-  
-  window.addEventListener('hashchange', () => callRoute());
-  window.addEventListener('DOMContentLoaded', () => callRoute());
+};
+
+window.addEventListener('hashchange', () => callRoute());
+window.addEventListener('DOMContentLoaded', () => callRoute());
+
+searchForm();
+

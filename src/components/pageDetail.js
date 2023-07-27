@@ -3,7 +3,7 @@ const apiKey = process.env.API_KEY;
 const PageDetail = (argument) => {
     const preparePage = () => {
       const cleanedArgument = argument.trim().replace(/\s+/g, "-");
-  
+      
       const displayGame = (gameData) => {
         const { name, released, description } = gameData;
         const articleDOM = document.querySelector(".page-detail .article");
@@ -22,6 +22,11 @@ const PageDetail = (argument) => {
   
       fetchGame('https://api.rawg.io/api/games', cleanedArgument);
     };
+
+    const searchGame = (searchTerm) => {
+      const cleanedSearchTerm = searchTerm.trim().replace(/\s+/g, "-");
+      fetchGame('https://api.rawg.io/api/games', cleanedSearchTerm);
+    };
   
     const render = () => {
       pageContent.innerHTML = `
@@ -35,6 +40,7 @@ const PageDetail = (argument) => {
       `;
   
       preparePage();
+      
     };
   
     render();

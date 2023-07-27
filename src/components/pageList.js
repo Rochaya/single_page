@@ -18,7 +18,7 @@ const PageList = (argument = '') => {
     };
 
     const fetchList = (url) => {
-      const finalURL = `${url}&search=${argument}`;
+      const finalURL = argument ? `${url}&search=${cleanedArgument}` : url;
       fetch(finalURL)
         .then((response) => response.json())
         .then((responseData) => {
