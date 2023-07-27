@@ -128,10 +128,33 @@ header .container-txt {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .articles {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   justify-content: center;
   gap: 20px;
+}
+
+button {
+  background-color: #d13939;
+  color: white;
+  font-family: "remxtra", sans-serif;
+  font-size: 16px;
+  padding: 12px 20px;
+  margin: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c02c2c;
 }

@@ -11,5 +11,3 @@ const searchForm = () => {
 
 
 export default searchForm;
-
-searchForm();
